@@ -15,17 +15,15 @@ plt.plot(x, y, 'bo', label='data')
 # Fit linear model:
 linear_model_parameters, _ = curve_fit(linear_model, x, y)
 
-# TODO: You have to write the quadratic model function first in models.py!
-
-# TODO: then fit quadratic model here:
-quadratic_model_parameters, _ = None, None
+# then fit quadratic model here:
+quadratic_model_parameters, _ = curve_fit(quadratic_model, x, y)
 
 x_fine, y_fine_linear, y_fine_quad = evaluate_fits(x, y, linear_model, linear_model_parameters,
                                                    quadratic_model, quadratic_model_parameters)
 
 # Plotting the results
 plt.plot(x_fine, y_fine_linear, 'r-', label="Linear fit")
-plt.plot(x_fine, y_fine_quad, 'b-', label="quadratic fit")
+plt.plot(x_fine, y_fine_quad, 'b-', label="quadratic fit", color='green')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()

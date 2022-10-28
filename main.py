@@ -23,7 +23,7 @@ x_fine, y_fine_linear, y_fine_quad = evaluate_fits(x, y, linear_model, linear_mo
 
 # Plotting the results
 plt.plot(x_fine, y_fine_linear, 'r-', label="Linear fit")
-plt.plot(x_fine, y_fine_quad, 'b-', label="quadratic fit", color='green')
+plt.plot(x_fine, y_fine_quad, 'g-', label="quadratic fit")
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
